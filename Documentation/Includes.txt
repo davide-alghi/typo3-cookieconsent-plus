@@ -1,0 +1,23 @@
+﻿.. ==================================================
+.. INFORMATIONS
+.. --------------------------------------------------
+
+.. -*- coding: utf-8 -*- with BOM.
+
+.. ==================================================
+.. ROLES
+.. --------------------------------------------------
+
+.. role::   typoscript(code)
+
+.. role::   ts(typoscript)
+   :class:  typoscript
+
+.. role::   php(code)
+.. role::   js(code)
+
+.. highlight:: php
+
+.. role:: aspect (emphasis)
+
+.. default-role:: code

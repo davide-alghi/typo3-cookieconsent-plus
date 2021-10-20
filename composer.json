@@ -1,0 +1,46 @@
+{
+		"name": "davide-alghi/typo3-cookieconsent-plus",
+		"type": "typo3-cms-extension",
+		"description": "Cookie Consent Plus adds some new features to Dirk Persky's Cookie Consent extension (dp_cookieconsent).",
+		"keywords": [
+			"typo3",
+			"cookieconsent",
+			"gdpr",
+			"cookie",
+			"consent",
+			"privacy"
+		],
+		"homepage": "https://github.com/davide-alghi/typo3-cookieconsentplus",
+		"support": {
+			"issues": "https://github.com/davide-alghi/typo3-cookieconsentplus/issues"
+		},
+		"authors": [
+			{
+				"name": "Davide Alghi",
+				"role": "Developer",
+				"email": "davide@penguinable.it",
+				"homepage": "https://www.penguinable.it"
+			}
+		],
+		"license": "GPL-3.0-or-later",
+		"require": {
+			"php" : "^7.2 || ^7.3 || ^7.4",
+			"typo3/cms-core": ">=10.4.* <11.3.0",
+			"dp_cookieconsent": "11.0.*"
+		},
+		"replace": {
+			"typo3-ter/cookieconsent_plus": "self.version"
+		},
+		"autoload": {
+			"psr-4": {
+				"PAD\\CookieconsentPlus\\": "Classes"
+			}
+		},
+		"extra": {
+			"typo3/cms": {
+				"extension-key": "cookieconsent_plus",
+				"cms-package-dir": "{$vendor-dir}/typo3/cms",
+				"web-dir": ".Build/Web"
+			}
+		}
+	}
