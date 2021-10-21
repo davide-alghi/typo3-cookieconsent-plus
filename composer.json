@@ -26,7 +26,7 @@
 	"require": {
 		"php" : ">=7.2",
 		"typo3/cms-core": "^10.4.0||^11.5.0",
-		"dp_cookieconsent": "^11.0.0"
+		"dirkpersky/typo3-dp_cookieconsent": "^11.0.0"
 	},
 	"autoload": {
 		"psr-4": {
