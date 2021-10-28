@@ -22,11 +22,11 @@ Cookie Consent Plus adds some new features to Dirk Persky's Cookie Consent exten
 |||
 | --- | --- |
 | Documentation / Manual |  |
-| TYPO3 extension repository |  |
+| TYPO3 extension repository | <https://extensions.typo3.org/extension/cookieconsent_plus> |
 | Source code | <https://github.com/davide-alghi/typo3-cookieconsent-plus> |
 | Issues / Bugs | <https://github.com/davide-alghi/typo3-cookieconsent-plus/issues> |
 | Contributions (Pull requests are welcome) | <https://github.com/davide-alghi/typo3-cookieconsent-plus/pulls> |
-| Packagist |  |
+| Packagist | <https://packagist.org/packages/davide-alghi/typo3-cookieconsent-plus> |
 
 ## Contact
 

@@ -8,16 +8,26 @@
 .. ROLES
 .. --------------------------------------------------
 
-.. role::   typoscript(code)
+.. role:: aspect(emphasis)
+.. role:: html(code)
+.. role:: js(code)
+.. role:: php(code)
+.. role:: pn(emphasis)
+.. role:: rst(code)
+.. role:: sep(strong)
+.. role:: typoscript(code)
 
-.. role::   ts(typoscript)
-   :class:  typoscript
+.. role:: ts(typoscript)
+   :class: typoscript
 
-.. role::   php(code)
-.. role::   js(code)
-
-.. highlight:: php
-
-.. role:: aspect (emphasis)
+.. role:: yaml(code)
 
 .. default-role:: code
+
+.. ---------
+.. highlight
+.. ---------
+
+.. By default, code blocks are php
+
+.. highlight:: php

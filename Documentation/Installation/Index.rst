@@ -31,4 +31,4 @@ Install extension by
    <https://extensions.typo3.org/extension/cookieconsent_plus>`_
    and upload by 'Extension Manager'
 * Composer
-   run `composer req davide-alghi/typo3-cookieconsent-plus`
+   run `composer require davide-alghi/typo3-cookieconsent-plus`
