@@ -7,8 +7,7 @@
 Introduction
 ============
 
-
-.. what-does-it-do:
+.. _what-does-it-do:
 
 What does it do?
 ================
@@ -17,15 +16,16 @@ Cookie Consent Plus adds some new features to
 Dirk Persky's Cookie Consent extension
 (`dp_cookieconsent <https://extensions.typo3.org/extension/dp_cookieconsent>`_)
 
-
 .. _features:
 
 Features
 --------
 
-* Dependency on cookies for page visibility
-* Dependency on cookies for content element visibility
-
+* Dependence on cookies for page visibility: conditions can be set to make
+  a page enabled/disabled depending on whether, or not, cookies are accepted
+* Dependence on cookies for content element visibility: conditions can be
+  set to make a content element enabled/disabled depending on whether, or not,
+  cookies are accepted
 
 .. _screenshots:
 
@@ -41,3 +41,6 @@ Screenshots
    :class: with-shadow
    :width: 400px
    :alt: content element cookies dependency
+
+|
+.. note:: This extension uses XCLASSES to extend core.

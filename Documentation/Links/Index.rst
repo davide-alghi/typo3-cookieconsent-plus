@@ -22,13 +22,11 @@ Links
 :Website:
    https://www.penguinable.com
 
-
 Contact
 =======
 
 For **bugs** and **features** use the
 `Github <https://github.com/davide-alghi/typo3-cookieconsent-plus/issues>`_.
-
 
 .. figure:: ../Images/penguinable_logo.png
    :alt: Penguinable

@@ -4,12 +4,15 @@
 
 # Cookie Consent Plus
 
-Cookie Consent Plus adds some new features to Dirk Persky's Cookie Consent extension ([dp_cookieconsent](https://extensions.typo3.org/extension/dp_cookieconsent))
+Cookie Consent Plus adds some new features to Dirk Persky's
+Cookie Consent extension ([dp_cookieconsent](https://extensions.typo3.org/extension/dp_cookieconsent))
 
 ## Current features
 
-* Dependence on cookies for page visibility
-* Dependence on cookies for content element visibility
+* Dependence on cookies for page visibility: conditions can be set to make a
+  page enabled/disabled depending on whether, or not, cookies are accepted
+* Dependence on cookies for content element visibility: conditions can be set
+  to make a content enabled/disabled depending on whether, or not, cookies are accepted
 
 ## Screenshots
 
@@ -21,7 +24,7 @@ Cookie Consent Plus adds some new features to Dirk Persky's Cookie Consent exten
 
 |||
 | --- | --- |
-| Documentation / Manual |  |
+| Documentation / Manual | <https://docs.typo3.org/p/davide-alghi/typo3-cookieconsent-plus/main/en-us/> |
 | TYPO3 extension repository | <https://extensions.typo3.org/extension/cookieconsent_plus> |
 | Source code | <https://github.com/davide-alghi/typo3-cookieconsent-plus> |
 | Issues / Bugs | <https://github.com/davide-alghi/typo3-cookieconsent-plus/issues> |

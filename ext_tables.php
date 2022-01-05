@@ -22,21 +22,19 @@ defined('TYPO3_MODE') or die();
  * along with Cookie Consent Plus. If not, see https://www.gnu.org/licenses/gpl-3.0.en.html.
  * See the file LICENSE.md for copying conditions.
  * Website: https://www.penguinable.it
- * 
+ *
  * @category TYPO3
  * @copyright 2021 Davide Alghi
  * @author Davide Alghi <davide@penguinable.it>
  * @license GPLv3
  */
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 (function () {
-    ExtensionManagementUtility::addLLrefForTCAdescr(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
         'pages',
         'EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_pages.xlf'
     );
-    ExtensionManagementUtility::addLLrefForTCAdescr(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
         'tt_content',
         'EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_ttcontent.xlf'
     );

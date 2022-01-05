@@ -23,10 +23,6 @@
 				<source>show if AT LEAST ONE condition</source>
 				<target>mostra se ALMENO UNA condizione</target>
 			</trans-unit>
-			<trans-unit id="pages.tx_cookieconsentplus_mandatorycondition">
-				<source>Mandatory cookies are</source>
-				<target>I cookie obbligatori sono</target>
-			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_statisticscondition">
 				<source>Statistics cookies are</source>
 				<target>I cookie di statistica sono</target>
@@ -66,10 +62,6 @@
 			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype.showor">
 				<source>show if AT LEAST ONE condition</source>
 				<target>mostra se ALMENO UNA condizione</target>
-			</trans-unit>
-			<trans-unit id="ttcontent.tx_cookieconsentplus_mandatorycondition">
-				<source>Mandatory cookies are</source>
-				<target>I cookie obbligatori sono</target>
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_statisticscondition">
 				<source>Statistics cookies are</source>

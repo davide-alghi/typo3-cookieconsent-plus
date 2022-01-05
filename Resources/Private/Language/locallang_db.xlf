@@ -18,9 +18,6 @@
 			<trans-unit id="pages.tx_cookieconsentplus_conditiontype.showor">
 				<source>show if AT LEAST ONE condition</source>
 			</trans-unit>
-			<trans-unit id="pages.tx_cookieconsentplus_mandatorycondition">
-				<source>Mandatory cookies are</source>
-			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_statisticscondition">
 				<source>Statistics cookies are</source>
 			</trans-unit>
@@ -50,9 +47,6 @@
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype.showor">
 				<source>show if AT LEAST ONE condition</source>
-			</trans-unit>
-			<trans-unit id="ttcontent.tx_cookieconsentplus_mandatorycondition">
-				<source>Mandatory cookies are</source>
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_statisticscondition">
 				<source>Statistics cookies are</source>

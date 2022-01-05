@@ -1,6 +1,6 @@
 <?php
 
-defined('TYPO3_MODE') or die();
+declare(strict_types = 1);
 
 /**
  * This file is part of the TYPO3 CMS extension.
@@ -29,7 +29,30 @@ defined('TYPO3_MODE') or die();
  * @license GPLv3
  */
 
-// Overload the TYPO3\CMS\Core\Domain\Repository\PageRepository class
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Core\Domain\Repository\PageRepository::class] = [
-    'className' => \PAD\CookieconsentPlus\Xclass\PageRepository::class,
-];
+namespace PAD\CookieconsentPlus\Compatibility;
+
+use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+class Version
+{
+    const DP_COOKIECONSENT_KEY = 'dp_cookieconsent';
+
+    /**
+     * If dp_cookieconsent is the new version
+     * returns true
+     * else false
+     * It is the new version, if it is eq to 11.2.1 or gte to 11.4.0
+     *
+     * @param none
+     * @return bool
+     */
+    public function isTheNewVersion(): bool
+    {
+        $version = ExtensionManagementUtility::getExtensionVersion(self::DP_COOKIECONSENT_KEY);
+        $result = false;
+        if (\version_compare($version, '11.2.1', '==') || \version_compare($version, '11.4.0', '>=')) {
+            $result = true;
+        }
+        return $result;
+    }
+}

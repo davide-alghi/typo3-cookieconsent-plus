@@ -13,10 +13,10 @@
 						Sets the evaluation type:
 						<ul>
 							<li>
-								<b>show if ALL conditions</b>: makes the content element visible if all below conditions are verified: mandatory, statistics and marketing
+								<b>show if ALL conditions</b>: makes the content element visible if all below conditions are verified: statistics and marketing
 							</li>
 							<li>
-								<b>show if AT LEAST ONE condition</b>: makes the content element visible if at least one of below conditions is verified: mandatory, statistics or marketing
+								<b>show if AT LEAST ONE condition</b>: makes the content element visible if at least one of below conditions is verified: statistics or marketing
 							</li>
 						</ul>
 					]]>
@@ -30,40 +30,6 @@
 							</li>
 							<li>
 								<b>mostra se ALMENO UNA condizione</b>: rende visibile il contenuto di pagina se almeno una delle condizioni qui sotto è verificata: obbligatori, statistica o marketing
-							</li>
-						</ul>
-					]]>
-				</target>
-			</trans-unit>
-			<trans-unit id="tx_cookieconsentplus_mandatorycondition.description" resname="tx_cookieconsentplus_mandatorycondition.description">
-				<source>
-					<![CDATA[
-						Mandatory cookies condition:
-						<ul>
-							<li>
-								<b>any value</b>: always true
-							</li>
-							<li>
-								<b>denied</b>: true if mandatory cookies are denied
-							</li>
-							<li>
-								<b>accepted</b>: true if mandatory cookies are accepted
-							</li>
-						</ul>
-					]]>
-				</source>
-				<target>
-					<![CDATA[
-						Condizione cookie obbligatori:
-						<ul>
-							<li>
-								<b>qualsiasi valore</b>: sempre vera
-							</li>
-							<li>
-								<b>negati</b>: vera se i cookie obbligatori sono negati
-							</li>
-							<li>
-								<b>accettati</b>: vera se i cookie obbligatori sono accettati
 							</li>
 						</ul>
 					]]>

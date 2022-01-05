@@ -22,7 +22,7 @@ declare(strict_types = 1);
  * along with Cookie Consent Plus. If not, see https://www.gnu.org/licenses/gpl-3.0.en.html.
  * See the file LICENSE.md for copying conditions.
  * Website: https://www.penguinable.it
- * 
+ *
  * @category TYPO3
  * @copyright 2021 Davide Alghi
  * @author Davide Alghi <davide@penguinable.it>
@@ -31,10 +31,10 @@ declare(strict_types = 1);
 
 namespace PAD\CookieconsentPlus\Xclass;
 
-use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Domain\Repository\PageRepository as CmsPageRepository;
-use PAD\CookieconsentPlus\Cookie\CookieManager;
+use \PAD\CookieconsentPlus\Cookie\CookieManager;
+use \TYPO3\CMS\Core\Database\ConnectionPool;
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
+use \TYPO3\CMS\Core\Domain\Repository\PageRepository as CmsPageRepository;
 
 class PageRepository extends CmsPageRepository
 {
@@ -46,7 +46,6 @@ class PageRepository extends CmsPageRepository
     const CONDITIONTYPE_VALUE_SHOWOR = 'showor';
     const CONDITIONTYPE_VALUE_HIDEAND = 'hideand';
     const CONDITIONTYPE_VALUE_HIDEOR = 'hideor';
-    const MANDATORYCONDITION_FIELD = 'tx_cookieconsentplus_mandatorycondition';
     const STATISTICSCONDITION_FIELD = 'tx_cookieconsentplus_statisticscondition';
     const MARKETINGCONDITION_FIELD = 'tx_cookieconsentplus_marketingcondition';
     const CONDITION_VALUE_ANYVALUE = 'anyvalue';
@@ -60,7 +59,7 @@ class PageRepository extends CmsPageRepository
 
     /**
      * Returns enable fields (constraints) for cookies dependency
-     * 
+     *
      * @param string $table - table on which to create the query
      * @return string
      */
@@ -69,13 +68,8 @@ class PageRepository extends CmsPageRepository
         $constraints = [];
         if (in_array($table, $this->allowedTables)) {
             $cookieManager = GeneralUtility::makeInstance(CookieManager::class);
-            $isMandatoryOn = $cookieManager->isMandatoryOn();
             $isStatisticsOn = $cookieManager->isStatisticsOn();
             $isMarketingOn = $cookieManager->isMarketingOn();
-            $mandatoryValues = [
-                self::CONDITION_VALUE_ANYVALUE,
-                $isMandatoryOn ? self::CONDITION_VALUE_ACCEPTED : self::CONDITION_VALUE_DENIED,
-            ];
             $statisticsValues = [
                 self::CONDITION_VALUE_ANYVALUE,
                 $isStatisticsOn ? self::CONDITION_VALUE_ACCEPTED : self::CONDITION_VALUE_DENIED,
@@ -86,7 +80,6 @@ class PageRepository extends CmsPageRepository
             ];
             $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($table);
             $expressionBuilder = $queryBuilder->expr();
-            $mandatoryValues = array_map([$expressionBuilder, 'literal'], $mandatoryValues);
             $statisticsValues = array_map([$expressionBuilder, 'literal'], $statisticsValues);
             $marketingValues = array_map([$expressionBuilder, 'literal'], $marketingValues);
             $constraints[] = $expressionBuilder->eq(
@@ -103,10 +96,6 @@ class PageRepository extends CmsPageRepository
                     $expressionBuilder->literal(self::CONDITIONTYPE_VALUE_SHOWAND)
                 ),
                 $expressionBuilder->andX(
-                    $expressionBuilder->in(
-                        self::MANDATORYCONDITION_FIELD,
-                        $mandatoryValues
-                    ),
                     $expressionBuilder->in(
                         self::STATISTICSCONDITION_FIELD,
                         $statisticsValues
@@ -128,10 +117,6 @@ class PageRepository extends CmsPageRepository
                 ),
                 $expressionBuilder->orX(
                     $expressionBuilder->in(
-                        self::MANDATORYCONDITION_FIELD,
-                        $mandatoryValues
-                    ),
-                    $expressionBuilder->in(
                         self::STATISTICSCONDITION_FIELD,
                         $statisticsValues
                     ),
@@ -147,7 +132,7 @@ class PageRepository extends CmsPageRepository
 
     /**
      * {@inheritdoc}
-     * 
+     *
      * In addition cookies sql constraints
      * are added to enableFields query
      */

@@ -22,7 +22,7 @@ declare(strict_types = 1);
  * along with Cookie Consent Plus. If not, see https://www.gnu.org/licenses/gpl-3.0.en.html.
  * See the file LICENSE.md for copying conditions.
  * Website: https://www.penguinable.it
- * 
+ *
  * @category TYPO3
  * @copyright 2021 Davide Alghi
  * @author Davide Alghi <davide@penguinable.it>
@@ -31,41 +31,73 @@ declare(strict_types = 1);
 
 namespace PAD\CookieconsentPlus\Cookie;
 
+use \PAD\CookieconsentPlus\Compatibility\Version;
+use \TYPO3\CMS\Core\Utility\GeneralUtility;
+
 class CookieManager
 {
     const COOKIECONSENTSTATUS_NAME = 'cookieconsent_status';
-    const COOKIECONSENTSTATUS_OPTOUT_NAME = 'dp_cookieconsent_status';
+    const COOKIECONSENTSTATUS_DP_NAME = 'dp_cookieconsent_status';
     const COOKIEDISMISSVALUE = 'dismiss';
     const COOKIEALLOWVALUE = 'allow';
     const COOKIEDENYVALUE = 'deny';
+    const COOKIEDIALOGSTATUSOPEN = 'open';
+    const COOKIEDIALOGSTATUSAPPROVED = 'approved';
+
     protected $cookieValue = '';
-    protected $optoutCookieValue = '';
+    protected $dpCookieValue = [];
     protected $cookieStatus = false;
-    protected $mandatoryCookieStatus = false;
+    protected $dpCookieStatus = '';
     protected $statisticsCookieStatus = false;
     protected $marketingCookieStatus = false;
 
     /**
      * Sets statuses from cookies value
-     * 
+     *
      * @param void
      */
     public function __construct()
     {
-        if (isset($_COOKIE[self::COOKIECONSENTSTATUS_NAME])) {
-            $this->cookieValue = $_COOKIE[self::COOKIECONSENTSTATUS_NAME];
-            if ($this->cookieValue) {
-                $this->cookieStatus = $_COOKIE[self::COOKIECONSENTSTATUS_NAME] == self::COOKIEDENYVALUE ? false : true;
-                if ($this->cookieStatus) {
-                    $this->mandatoryCookieStatus = true;
-                    if ($this->cookieValue != self::COOKIEDISMISSVALUE && isset($_COOKIE[self::COOKIECONSENTSTATUS_OPTOUT_NAME])) {
-                        $this->optoutCookieValue = $_COOKIE[self::COOKIECONSENTSTATUS_OPTOUT_NAME];
-                        $optoutCookieValueArray = json_decode($_COOKIE[self::COOKIECONSENTSTATUS_OPTOUT_NAME], true);
-                        $this->statisticsCookieStatus = (boolean) $optoutCookieValueArray['dp--cookie-statistics'];
-                        $this->marketingCookieStatus = (boolean) $optoutCookieValueArray['dp--cookie-marketing'];
-                    } else {
-                        $this->statisticsCookieStatus = true;
-                        $this->marketingCookieStatus = true;
+        $versionCompatibility = GeneralUtility::makeInstance(Version::class);
+        if ($versionCompatibility->isTheNewVersion()) { // dp_cookieconsent new version
+            if (isset($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME])) {
+                $this->cookieValue = '';
+                $this->cookieStatus = false;
+                $this->dpCookieValue = json_decode($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME], true);
+                $this->dpCookieStatus = $this->dpCookieValue['status'];
+                if ($this->dpCookieStatus == self::COOKIEDIALOGSTATUSAPPROVED) {
+                    if (is_array($this->dpCookieValue['checkboxes'])) {
+                        foreach ($this->dpCookieValue['checkboxes'] as $key => $value) {
+                            switch ($value['name']) {
+                                case 'statistics':
+                                    $this->statisticsCookieStatus = (boolean) $value['checked'];
+                                    break;
+
+                                case 'marketing':
+                                    $this->marketingCookieStatus = (boolean) $value['checked'];
+                                    break;
+                            }
+                        }
+                    }
+                } else {
+                    $this->statisticsCookieStatus = false;
+                    $this->marketingCookieStatus = false;
+                }
+            }
+        } else { // dp_cookieconsent old version
+            if (isset($_COOKIE[self::COOKIECONSENTSTATUS_NAME])) {
+                $this->cookieValue = $_COOKIE[self::COOKIECONSENTSTATUS_NAME];
+                if ($this->cookieValue) {
+                    $this->cookieStatus = $_COOKIE[self::COOKIECONSENTSTATUS_NAME] == self::COOKIEDENYVALUE ? false : true;
+                    if ($this->cookieStatus) {
+                        if ($this->cookieValue != self::COOKIEDISMISSVALUE && isset($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME])) {
+                            $this->dpCookieValue = json_decode($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME], true);
+                            $this->statisticsCookieStatus = (boolean) $this->dpCookieValue['dp--cookie-statistics'];
+                            $this->marketingCookieStatus = (boolean) $this->dpCookieValue['dp--cookie-marketing'];
+                        } else {
+                            $this->statisticsCookieStatus = true;
+                            $this->marketingCookieStatus = true;
+                        }
                     }
                 }
             }
@@ -74,7 +106,7 @@ class CookieManager
 
     /**
      * Returns cookieconsent_status cookie value
-     * 
+     *
      * @param void
      * @return string
      */
@@ -85,19 +117,18 @@ class CookieManager
 
     /**
      * Returns dp_cookieconsent_status cookie value
-     * in array format
-     * 
+     *
      * @param void
      * @return array
      */
-    public function getOptoutCookieValue(): array
+    public function getDpCookieValue(): array
     {
-        return json_decode($this->optoutCookieValue, true);
+        return $this->dpCookieValue;
     }
 
     /**
      * Returns cookies status
-     * 
+     *
      * @param void
      * @return bool
      */
@@ -107,21 +138,20 @@ class CookieManager
     }
 
     /**
-     * Returns mandatory cookies status
-     * accepted: true, denied: false
-     * 
+     * Returns dp cookies status
+     *
      * @param void
-     * @return bool
+     * @return string
      */
-    public function isMandatoryOn(): bool
+    public function getDpCookieStatus(): string
     {
-        return $this->mandatoryCookieStatus;
+        return $this->dpCookieStatus;
     }
 
     /**
      * Returns statistics cookies status
      * accepted: true, denied: false
-     * 
+     *
      * @param void
      * @return bool
      */
@@ -133,7 +163,7 @@ class CookieManager
     /**
      * Returns marketing cookies status
      * accepted: true, denied: false
-     * 
+     *
      * @param void
      * @return bool
      */
@@ -145,9 +175,9 @@ class CookieManager
     /**
      * Removes cookie with defined
      * name, path and domain
-     * 
+     *
      * @param string $name - the cookie name
-     * @param string $path - the path for which the cookie is valid 
+     * @param string $path - the path for which the cookie is valid
      * @param string $domain - the domain from which the cookie comes
      * @return void
      */
