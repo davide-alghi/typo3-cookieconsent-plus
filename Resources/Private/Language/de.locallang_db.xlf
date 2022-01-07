@@ -9,7 +9,7 @@
 			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_iscookiesdependent">
 				<source>Is cookie-dependent</source>
-				<target>Ist abhängig von cookies</target>
+				<target>Ist abhängig von Cookies</target>
 			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_conditiontype">
 				<source>Conditions evaluation type</source>
@@ -49,7 +49,7 @@
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_iscookiesdependent">
 				<source>Is cookie-dependent</source>
-				<target>Ist abhängig von cookies</target>
+				<target>Ist abhängig von Cookies</target>
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype">
 				<source>Conditions evaluation type</source>

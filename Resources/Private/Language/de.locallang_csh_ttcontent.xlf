@@ -54,7 +54,7 @@
 				</source>
 				<target>
                     <![CDATA[
-                        Statistik Cookies Bedingungen:
+                        Statistik Cookies Bedingung:
                         <ul>
                             <li>
                                 <b>vorhanden</b>: immer wahr
@@ -88,7 +88,7 @@
 				</source>
 				<target>
                     <![CDATA[
-                        Marketing Cookies Bedingungen:
+                        Marketing Cookies Bedingung:
                         <ul>
                             <li>
                                 <b>vorhanden</b>: immer wahr
