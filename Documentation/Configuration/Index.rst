@@ -3,9 +3,9 @@
 
 .. _configuration:
 
-=============
+====
 Configuration
-=============
+====
 
 This extension needs no configuration.
 

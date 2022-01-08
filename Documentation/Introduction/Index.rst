@@ -3,14 +3,14 @@
 
 .. _introduction:
 
-============
+====
 Introduction
-============
+====
 
 .. _what-does-it-do:
 
 What does it do?
-================
+====
 
 Cookie Consent Plus adds some new features to
 Dirk Persky's Cookie Consent extension
@@ -19,7 +19,7 @@ Dirk Persky's Cookie Consent extension
 .. _features:
 
 Features
---------
+----
 
 * Dependence on cookies for page visibility: conditions can be set to make
   a page enabled/disabled depending on whether, or not, cookies are accepted
@@ -30,7 +30,7 @@ Features
 .. _screenshots:
 
 Screenshots
-===========
+====
 
 .. image:: ../Images/screenshot_001.png
    :class: with-shadow

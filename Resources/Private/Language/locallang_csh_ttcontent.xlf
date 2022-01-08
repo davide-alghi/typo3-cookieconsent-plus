@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" datatype="plaintext" original="EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_ttcontent.xlf" date="2021-06-17T11:16:11Z" product-name="cookieconsent_plus">
+	<file source-language="en"
+		datatype="plaintext"
+		original="EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_ttcontent.xlf"
+		date="2021-06-17T11:16:11Z"
+		product-name="cookieconsent_plus">
 		<header/>
 		<body>
 			<trans-unit id="tx_cookieconsentplus_iscookiesdependent.description" resname="tx_cookieconsentplus_iscookiesdependent.description">

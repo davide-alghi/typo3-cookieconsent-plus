@@ -3,19 +3,19 @@
 
 .. _installation:
 
-============
+====
 Installation
-============
+====
 
 Requirements
-============
+====
 
 Cookie Consent Plus requires Dirk Persky's Cookie Consent extension
 (`dp_cookieconsent <https://extensions.typo3.org/extension/dp_cookieconsent>`_).
 Install *dp_cookieconsent* extension before *cookieconsent_plus*.
 
 Install
-=======
+====
 
 Install extension by
 

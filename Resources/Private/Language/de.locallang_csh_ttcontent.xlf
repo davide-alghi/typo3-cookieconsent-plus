@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" datatype="plaintext" original="EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_ttcontent.xlf" date="2022-01-07T15:02:31Z" product-name="cookieconsent_plus" target-language="de">
+	<file source-language="en"
+		datatype="plaintext"
+		original="EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_ttcontent.xlf"
+		date="2022-01-07T15:02:31Z"
+		product-name="cookieconsent_plus"
+		target-language="de">
 		<header/>
 		<body>
 			<trans-unit id="tx_cookieconsentplus_iscookiesdependent.description" resname="tx_cookieconsentplus_iscookiesdependent.description">
@@ -22,18 +27,18 @@
 					]]>
 				</source>
 				<target>
-                    <![CDATA[
-                        Legt den Bedingungsart fest
-                        <ul>
-                            <li>
-                                <b>anzeigen wenn ALLE zutreffen</b>: macht das Inhaltselement sichtbar, wenn alle folgenden Bedingungen erfüllt sind: Statistik und Marketing
-                            </li>
-                            <li>
-                                <b>anzeigen wenn EINS zutrifft</b>: macht das Inhaltselement sichtbar, wenn mindestens eine der folgenden Bedingungen erfüllt ist: Statistik oder Marketing
-                            </li>
-                        </ul>
-                    ]]>
-                </target>
+					<![CDATA[
+						Legt den Bedingungsart fest
+						<ul>
+							<li>
+								<b>anzeigen wenn ALLE zutreffen</b>: macht das Inhaltselement sichtbar, wenn alle folgenden Bedingungen erfüllt sind: Statistik und Marketing
+							</li>
+							<li>
+								<b>anzeigen wenn EINS zutrifft</b>: macht das Inhaltselement sichtbar, wenn mindestens eine der folgenden Bedingungen erfüllt ist: Statistik oder Marketing
+							</li>
+						</ul>
+					]]>
+				</target>
 			</trans-unit>
 			<trans-unit id="tx_cookieconsentplus_statisticscondition.description" resname="tx_cookieconsentplus_statisticscondition.description">
 				<source>
@@ -53,21 +58,21 @@
 					]]>
 				</source>
 				<target>
-                    <![CDATA[
-                        Statistik Cookies Bedingung:
-                        <ul>
-                            <li>
-                                <b>vorhanden</b>: immer wahr
-                            </li>
-                            <li>
-                                <b>abgelehnt</b>: wahr, wenn Statistik Cookies nicht zugestimmt wurde
-                            </li>
-                            <li>
-                                <b>zugestimmt</b>: wahr, wenn Statistik Cookies zugestimmt wurde
-                            </li>
-                        </ul>
-                    ]]>
-                </target>
+					<![CDATA[
+						Statistik Cookies Bedingung:
+						<ul>
+							<li>
+								<b>vorhanden</b>: immer wahr
+							</li>
+							<li>
+								<b>abgelehnt</b>: wahr, wenn Statistik Cookies nicht zugestimmt wurde
+							</li>
+							<li>
+								<b>zugestimmt</b>: wahr, wenn Statistik Cookies zugestimmt wurde
+							</li>
+						</ul>
+					]]>
+				</target>
 			</trans-unit>
 			<trans-unit id="tx_cookieconsentplus_marketingcondition.description" resname="tx_cookieconsentplus_marketingcondition.description">
 				<source>
@@ -87,21 +92,21 @@
 					]]>
 				</source>
 				<target>
-                    <![CDATA[
-                        Marketing Cookies Bedingung:
-                        <ul>
-                            <li>
-                                <b>vorhanden</b>: immer wahr
-                            </li>
-                            <li>
-                                <b>abgelehnt</b>: wahr, wenn Marketing Cookies nicht zugestimmt wurde
-                            </li>
-                            <li>
-                                <b>zugestimmt</b>: wahr, wenn Marketing Cookies zugestimmt wurde
-                            </li>
-                        </ul>
-                    ]]>
-                </target>
+					<![CDATA[
+						Marketing Cookies Bedingung:
+						<ul>
+							<li>
+								<b>vorhanden</b>: immer wahr
+							</li>
+							<li>
+								<b>abgelehnt</b>: wahr, wenn Marketing Cookies nicht zugestimmt wurde
+							</li>
+							<li>
+								<b>zugestimmt</b>: wahr, wenn Marketing Cookies zugestimmt wurde
+							</li>
+						</ul>
+					]]>
+				</target>
 			</trans-unit>
 		</body>
 	</file>

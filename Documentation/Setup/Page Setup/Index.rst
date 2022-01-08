@@ -3,14 +3,14 @@
 
 .. _page-setup:
 
-==========
+====
 Page Setup
-==========
+====
 
 Here, step by step, how to enable cookies dependency and conditions setting.
 
 Steps
-=====
+====
 
 #. Edit the Page you have to set as cookie-dependent
 
@@ -49,7 +49,7 @@ Steps
    |
 
 Conditions evaluation type
-==========================
+====
 
 Here you have two options:
 
@@ -60,7 +60,7 @@ Here you have two options:
   are false
 
 Conditions
-==========
+====
 
 In condition menus (Statistics, Marketing)
 three options are available:

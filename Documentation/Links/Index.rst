@@ -3,9 +3,9 @@
 
 .. _links:
 
-=====
+====
 Links
-=====
+====
 
 :TER:
    https://extensions.typo3.org/extension/cookieconsent_plus
@@ -23,7 +23,7 @@ Links
    https://www.penguinable.com
 
 Contact
-=======
+====
 
 For **bugs** and **features** use the
 `Github <https://github.com/davide-alghi/typo3-cookieconsent-plus/issues>`_.
