@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:cookieconsent_plus/Resources/Private/Language/locallang_db.xlf" date="2022-01-07T15:02:31Z" product-name="cookieconsent_plus" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="pages.tx_cookieconsentplus_iscookiesdependent.label">
+				<source>Cookie-dependent visibility</source>
+				<target>Cookie abhängige Sichtbarkeit</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_iscookiesdependent">
+				<source>Is cookie-dependent</source>
+				<target>Ist abhängig von Cookies</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditiontype">
+				<source>Conditions evaluation type</source>
+				<target>Bedingungsart</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditiontype.showand">
+				<source>show if ALL conditions</source>
+				<target>anzeigen wenn alle zutreffen</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditiontype.showor">
+				<source>show if AT LEAST ONE condition</source>
+				<target>anzeigen wenn eins zutrifft</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_statisticscondition">
+				<source>Statistics cookies are</source>
+				<target>Statistik Cookies sind</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_marketingcondition">
+				<source>Marketing cookies are</source>
+				<target>Marketing Cookies sind</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditionvalue.anyvalue">
+				<source>any value</source>
+				<target>vorhanden</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditionvalue.denied">
+				<source>denied</source>
+				<target>abgelehnt</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditionvalue.accepted">
+				<source>accepted</source>
+				<target>zugestimmt</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_iscookiesdependent.label">
+				<source>Cookie-dependent visibility</source>
+				<target>Cookie abhängige Sichtbarkeit</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_iscookiesdependent">
+				<source>Is cookie-dependent</source>
+				<target>Ist abhängig von Cookies</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype">
+				<source>Conditions evaluation type</source>
+				<target>Bedingungsart</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype.showand">
+				<source>show if ALL conditions</source>
+				<target>anzeigen wenn alle zutreffen</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype.showor">
+				<source>show if AT LEAST ONE condition</source>
+				<target>anzeigen wenn eins zutrifft</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_statisticscondition">
+				<source>Statistics cookies are</source>
+				<target>Statistik Cookies sind</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_marketingcondition">
+				<source>Marketing cookies are</source>
+				<target>Marketing Cookies sind</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditionvalue.anyvalue">
+				<source>any value</source>
+				<target>vorhanden</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditionvalue.denied">
+				<source>denied</source>
+				<target>abgelehnt</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditionvalue.accepted">
+				<source>accepted</source>
+				<target>zugestimmt</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
