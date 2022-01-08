@@ -1,5 +1,3 @@
 .backup
-.gitignore
 /Documentation-GENERATED-temp
 .vscode
-.editorconfig
