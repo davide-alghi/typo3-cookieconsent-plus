@@ -9,6 +9,18 @@ Changelog
 
 All notable changes will be documented in this file.
 
+[0.3.0] - 2023-10-27
+####
+
+Added
+****
+* Query restrictions for QueryBuilder
+* WHERE clause for custom EnableColumns
+
+Removed
+****
+* XCLASS: PAD\\CookieconsentPlus\\Xclass\\PageRepository
+
 [0.2.0] - 2022-01-08
 ####
 

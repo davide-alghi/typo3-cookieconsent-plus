@@ -43,4 +43,7 @@ Screenshots
    :alt: content element cookies dependency
 
 |
-.. note:: This extension uses XCLASSES to extend core.
+.. note:: | *XCLASS has been removed.*
+          | **Fully re-engineered with query restriction and custom TCA enable columns.**
+
+

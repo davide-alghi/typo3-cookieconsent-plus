@@ -27,27 +27,24 @@
  * @license GPLv3
  */
 
-$EM_CONF[$_EXTKEY] = array (
+$EM_CONF[$_EXTKEY] = [
     'title' => 'Cookie Consent Plus',
     'description' => 'Cookie Consent Plus adds some new features to Dirk Persky\'s Cookie Consent extension (dp_cookieconsent).',
     'category' => 'fe',
+    'version' => '1.0.0',
     'state' => 'alpha',
-    'version' => '0.2.0',
-    'clearCacheOnLoad' => true,
+    'uploadfolder' => false,
+    'clearcacheonload' => true,
     'author' => 'Davide Alghi',
     'author_email' => 'davide@penguinable.it',
     'author_company' => '',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.0-11.5.99',
-            'dp_cookieconsent' => '11.0.0',
+            'typo3' => '11.5.32-12.4.99',
+            'dp_cookieconsent' => '12.0.0',
+            'php' => '7.4.1'
         ],
         'conflicts' => [],
         'suggests' => [],
     ],
-    'autoload' => [
-        'psr-4' => [
-            'PAD\\CookieconsentPlus\\' => 'Classes'
-        ],
-    ],
-);
+];

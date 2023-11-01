@@ -16,9 +16,17 @@
 				<source>Is cookie-dependent</source>
 				<target>Ist abhängig von Cookies</target>
 			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_iscookiesdependent.description">
+				<source>Sets the visibility of the page with respect to the denial or acceptance of cookies or part of them</source>
+				<target>Legt die Sichtbarkeit der Seite in Bezug auf die Ablehnung oder Annahme von Cookies fest</target>
+			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_conditiontype">
 				<source>Conditions evaluation type</source>
 				<target>Bedingungsart</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_conditiontype.description">
+				<source>Sets the evaluation type - [show if ALL conditions] makes the page visible if all below conditions are verified: statistics and marketing. [show if AT LEAST ONE condition] makes the page visible if at least one of below conditions is verified: statistics or marketing.</source>
+				<target>Legt den Bedingungsart fest - [anzeigen wenn ALLE zutreffen] macht die Seite sichtbar, wenn alle folgenden Bedingungen erfüllt sind: Statistik und Marketing. [anzeigen wenn EINS zutrifft] macht die Seite sichtbar, wenn mindestens eine der folgenden Bedingungen erfüllt ist: Statistik oder Marketing.</target>
 			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_conditiontype.showand">
 				<source>show if ALL conditions</source>
@@ -32,9 +40,17 @@
 				<source>Statistics cookies are</source>
 				<target>Statistik Cookies sind</target>
 			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_statisticscondition.description">
+				<source>Statistics cookies condition - [any value] always true. [denied] true if statistics cookies are denied. [accepted] true if statistics cookies are accepted.</source>
+				<target>Statistik Cookies Bedingung - [vorhanden]: immer wahr. [abgelehnt]: wahr, wenn Statistik Cookies nicht zugestimmt wurde. [zugestimmt]: wahr, wenn Statistik Cookies zugestimmt wurde.</target>
+			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_marketingcondition">
 				<source>Marketing cookies are</source>
 				<target>Marketing Cookies sind</target>
+			</trans-unit>
+			<trans-unit id="pages.tx_cookieconsentplus_marketingcondition.description">
+				<source>Marketing cookies condition - [any value] always true. [denied] true if marketing cookies are denied. [accepted] true if marketing cookies are accepted.</source>
+				<target>Marketing Cookies Bedingung - [vorhanden] immer wahr. [abgelehnt] wahr, wenn Marketing Cookies nicht zugestimmt wurde. [zugestimmt] wahr, wenn Marketing Cookies zugestimmt wurde.</target>
 			</trans-unit>
 			<trans-unit id="pages.tx_cookieconsentplus_conditionvalue.anyvalue">
 				<source>any value</source>
@@ -56,9 +72,17 @@
 				<source>Is cookie-dependent</source>
 				<target>Ist abhängig von Cookies</target>
 			</trans-unit>
+			<trans-unit id="tx_cookieconsentplus_iscookiesdependent.description">
+				<source>Sets the visibility of the content element with respect to the denial or acceptance of cookies or part of them</source>
+				<target>Legt die Sichtbarkeit der Inhaltselemente in Bezug auf die Ablehnung oder Annahme von Cookies fest</target>
+			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype">
 				<source>Conditions evaluation type</source>
 				<target>Bedingungsart</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype.description">
+				<source>Sets the evaluation type - [show if ALL conditions] makes the content element visible if all below conditions are verified: statistics and marketing. [show if AT LEAST ONE condition] makes the content element visible if at least one of below conditions is verified: statistics or marketing.</source>
+				<target>Legt den Bedingungsart fest - [anzeigen wenn ALLE zutreffen] macht das Inhaltselement sichtbar, wenn alle folgenden Bedingungen erfüllt sind: Statistik und Marketing. [anzeigen wenn EINS zutrifft] macht das Inhaltselement sichtbar, wenn mindestens eine der folgenden Bedingungen erfüllt ist: Statistik oder Marketing.</target>
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_conditiontype.showand">
 				<source>show if ALL conditions</source>
@@ -72,9 +96,17 @@
 				<source>Statistics cookies are</source>
 				<target>Statistik Cookies sind</target>
 			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_statisticscondition.description">
+				<source>Statistics cookies condition - [any value] always true. [denied] true if statistics cookies are denied. [accepted] true if statistics cookies are accepted.</source>
+				<target>Statistik Cookies Bedingung - [vorhanden] immer wahr. [abgelehnt] wahr, wenn Statistik Cookies nicht zugestimmt wurde. [zugestimmt] wahr, wenn Statistik Cookies zugestimmt wurde.</target>
+			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_marketingcondition">
 				<source>Marketing cookies are</source>
 				<target>Marketing Cookies sind</target>
+			</trans-unit>
+			<trans-unit id="ttcontent.tx_cookieconsentplus_marketingcondition.description">
+				<source>Marketing cookies condition - [any value] always true. [denied]: true if marketing cookies are denied. [accepted] true if marketing cookies are accepted.</source>
+				<target>Marketing Cookies Bedingung - [vorhanden] immer wahr. [abgelehnt] wahr, wenn Marketing Cookies nicht zugestimmt wurde. [zugestimmt] wahr, wenn Marketing Cookies zugestimmt wurde.</target>
 			</trans-unit>
 			<trans-unit id="ttcontent.tx_cookieconsentplus_conditionvalue.anyvalue">
 				<source>any value</source>

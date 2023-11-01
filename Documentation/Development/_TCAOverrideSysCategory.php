@@ -2,8 +2,8 @@
 
 defined('TYPO3') or die();
 
-// adds cookies-dependent enable fields to 'page' model TCA and insert in 'access' sheet
-$ll = 'LLL:EXT:cookieconsent_plus/Resources/Private/Language/locallang_db.xlf:pages.';
+// adds cookies-dependent enable fields to 'sys_category' model TCA and insert in 'access' sheet
+$ll = 'LLL:EXT:cookieconsent_plus/Resources/Private/Language/locallang_db.xlf:ttcontent.';
 $newFields = [
     'tx_cookieconsentplus_iscookiesdependent' => [
         'label' => $ll . 'tx_cookieconsentplus_iscookiesdependent',
@@ -91,20 +91,20 @@ $newFields = [
         ],
     ],
 ];
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $newFields);
-$GLOBALS['TCA']['pages']['palettes']['cookiesdependent'] = [
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('sys_category', $newFields);
+$GLOBALS['TCA']['sys_category']['palettes']['cookiesdependent'] = [
     'label' => $ll . 'tx_cookieconsentplus_iscookiesdependent.label',
     'showitem' => 'tx_cookieconsentplus_iscookiesdependent,
         --linebreak--, tx_cookieconsentplus_conditiontype,
         --linebreak--, tx_cookieconsentplus_statisticscondition, tx_cookieconsentplus_marketingcondition',
 ];
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-    'pages',
+    'sys_category',
     '--palette--;;cookiesdependent',
     '',
-    'after:nav_hide'
+    'after:hidden'
 );
-$GLOBALS['TCA']['pages']['ctrl']['enablecolumns']['cookiesdependent_iscookiesdependent'] = 'tx_cookieconsentplus_iscookiesdependent';
-$GLOBALS['TCA']['pages']['ctrl']['enablecolumns']['cookiesdependent_conditiontype'] = 'tx_cookieconsentplus_conditiontype';
-$GLOBALS['TCA']['pages']['ctrl']['enablecolumns']['cookiesdependent_statisticscondition'] = 'tx_cookieconsentplus_statisticscondition';
-$GLOBALS['TCA']['pages']['ctrl']['enablecolumns']['cookiesdependent_marketingcondition'] = 'tx_cookieconsentplus_marketingcondition';
+$GLOBALS['TCA']['sys_category']['ctrl']['enablecolumns']['cookiesdependent_iscookiesdependent'] = 'tx_cookieconsentplus_iscookiesdependent';
+$GLOBALS['TCA']['sys_category']['ctrl']['enablecolumns']['cookiesdependent_conditiontype'] = 'tx_cookieconsentplus_conditiontype';
+$GLOBALS['TCA']['sys_category']['ctrl']['enablecolumns']['cookiesdependent_statisticscondition'] = 'tx_cookieconsentplus_statisticscondition';
+$GLOBALS['TCA']['sys_category']['ctrl']['enablecolumns']['cookiesdependent_marketingcondition'] = 'tx_cookieconsentplus_marketingcondition';

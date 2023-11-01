@@ -1,6 +1,8 @@
 <?php
 
-defined('TYPO3_MODE') or die();
+declare(strict_types=1);
+
+defined('TYPO3') or die();
 
 /**
  * This file is part of the TYPO3 CMS extension.
@@ -29,7 +31,7 @@ defined('TYPO3_MODE') or die();
  * @license GPLv3
  */
 
-// Overload the TYPO3\CMS\Core\Domain\Repository\PageRepository class
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Core\Domain\Repository\PageRepository::class] = [
-    'className' => \PAD\CookieconsentPlus\Xclass\PageRepository::class,
-];
+// Adds cookies query restriction for QueryBuilder
+$GLOBALS['TYPO3_CONF_VARS']['DB']['additionalQueryRestrictions'][\PAD\CookieconsentPlus\Database\Query\Restriction\CookieRestriction::class] ??= [];
+// Adds where clause for custom EnableColumns
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_page.php']['addEnableColumns'][1698385983] = \PAD\CookieconsentPlus\Hook\AddEnableColumnsHook::class . '->addAdditionalWhereConditions';

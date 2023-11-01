@@ -58,6 +58,8 @@ on the top right to submit your change request.
    Installation/Index
    Configuration/Index
    Setup/Index
+   Development/Index
+   Cache/Index
    Changelog/Index
    Contributing/Index
    Links/Index

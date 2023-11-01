@@ -31,18 +31,12 @@ declare(strict_types = 1);
 
 namespace PAD\CookieconsentPlus\Cookie;
 
-use \PAD\CookieconsentPlus\Compatibility\Version;
-use \TYPO3\CMS\Core\Utility\GeneralUtility;
-
 class CookieManager
 {
-    const COOKIECONSENTSTATUS_NAME = 'cookieconsent_status';
-    const COOKIECONSENTSTATUS_DP_NAME = 'dp_cookieconsent_status';
-    const COOKIEDISMISSVALUE = 'dismiss';
-    const COOKIEALLOWVALUE = 'allow';
-    const COOKIEDENYVALUE = 'deny';
-    const COOKIEDIALOGSTATUSOPEN = 'open';
-    const COOKIEDIALOGSTATUSAPPROVED = 'approved';
+    const DP_COOKIECONSENT_STATUS = 'dp_cookieconsent_status';
+    const DP_COOKIECONSENT_STATISTICS = 'statistics';
+    const DP_COOKIECONSENT_MARKETING = 'marketing';
+    const DP_COOKIECONSENT_DIALOG_STATUS_APPROVED = 'approved';
 
     protected $cookieValue = '';
     protected $dpCookieValue = [];
@@ -58,48 +52,28 @@ class CookieManager
      */
     public function __construct()
     {
-        $versionCompatibility = GeneralUtility::makeInstance(Version::class);
-        if ($versionCompatibility->isTheNewVersion()) { // dp_cookieconsent new version
-            if (isset($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME])) {
-                $this->cookieValue = '';
-                $this->cookieStatus = false;
-                $this->dpCookieValue = json_decode($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME], true);
-                $this->dpCookieStatus = $this->dpCookieValue['status'];
-                if ($this->dpCookieStatus == self::COOKIEDIALOGSTATUSAPPROVED) {
-                    if (is_array($this->dpCookieValue['checkboxes'])) {
-                        foreach ($this->dpCookieValue['checkboxes'] as $key => $value) {
-                            switch ($value['name']) {
-                                case 'statistics':
-                                    $this->statisticsCookieStatus = (boolean) $value['checked'];
-                                    break;
+        if (isset($_COOKIE[self::DP_COOKIECONSENT_STATUS])) {
+            $this->cookieValue = '';
+            $this->cookieStatus = false;
+            $this->dpCookieValue = json_decode($_COOKIE[self::DP_COOKIECONSENT_STATUS], true);
+            $this->dpCookieStatus = $this->dpCookieValue['status'];
+            if ($this->dpCookieStatus == self::DP_COOKIECONSENT_DIALOG_STATUS_APPROVED) {
+                if (is_array($this->dpCookieValue['checkboxes'])) {
+                    foreach ($this->dpCookieValue['checkboxes'] as $key => $value) {
+                        switch ($value['name']) {
+                            case self::DP_COOKIECONSENT_STATISTICS:
+                                $this->statisticsCookieStatus = boolval($value['checked']);
+                                break;
 
-                                case 'marketing':
-                                    $this->marketingCookieStatus = (boolean) $value['checked'];
-                                    break;
-                            }
-                        }
-                    }
-                } else {
-                    $this->statisticsCookieStatus = false;
-                    $this->marketingCookieStatus = false;
-                }
-            }
-        } else { // dp_cookieconsent old version
-            if (isset($_COOKIE[self::COOKIECONSENTSTATUS_NAME])) {
-                $this->cookieValue = $_COOKIE[self::COOKIECONSENTSTATUS_NAME];
-                if ($this->cookieValue) {
-                    $this->cookieStatus = $_COOKIE[self::COOKIECONSENTSTATUS_NAME] == self::COOKIEDENYVALUE ? false : true;
-                    if ($this->cookieStatus) {
-                        if ($this->cookieValue != self::COOKIEDISMISSVALUE && isset($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME])) {
-                            $this->dpCookieValue = json_decode($_COOKIE[self::COOKIECONSENTSTATUS_DP_NAME], true);
-                            $this->statisticsCookieStatus = (boolean) $this->dpCookieValue['dp--cookie-statistics'];
-                            $this->marketingCookieStatus = (boolean) $this->dpCookieValue['dp--cookie-marketing'];
-                        } else {
-                            $this->statisticsCookieStatus = true;
-                            $this->marketingCookieStatus = true;
+                            case self::DP_COOKIECONSENT_MARKETING:
+                                $this->marketingCookieStatus = boolval($value['checked']);
+                                break;
                         }
                     }
                 }
+            } else {
+                $this->statisticsCookieStatus = false;
+                $this->marketingCookieStatus = false;
             }
         }
     }

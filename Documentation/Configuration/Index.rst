@@ -10,4 +10,4 @@ Configuration
 This extension needs no configuration.
 
 Configuration is required for dp_cookieconsent extension
-(`see <https://github.com/DirkPersky/typo3-dp_cookieconsent#config>`_)
+(`see <https://docs.typo3.org/p/dirkpersky/typo3-dp_cookieconsent/main/en-us/Configuration/Configuration.html#configuration>`_)

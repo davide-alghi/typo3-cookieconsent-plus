@@ -12,34 +12,41 @@ Here, step by step, how to enable cookies dependency and conditions setting.
 Steps
 ====
 
-#. Edit the Page you have to set as cookie-dependent
+.. rst-class:: bignums
 
-#. Go to 'Access' tab
+#. Edit the page you have to set as cookie-dependent
 
-#. Click on 'Is cookie-dependent' checkbox
+#. Go to :guilabel:`Access` tab
+
+#. Tick the :guilabel:`Is cookie-dependent` checkbox
 
    .. image:: ../../Images/setup_001.png
       :class: with-shadow
       :width: 400px
       :alt: setup
    |
-#. A 'Refresh required' confirmation is showed: click 'OK'
+#. A :guilabel:`Refresh required` confirmation is showed: click :guilabel:`OK`
 
    .. image:: ../../Images/setup_002.png
       :class: with-shadow
       :width: 400px
       :alt: setup
    |
-#. Select 'Conditions evaluation type':
+#. Select :guilabel:`Conditions evaluation type`:
 
-   * *show if ALL conditions*
-   * *show if AT LEAST ONE condition*
+   * | :guilabel:`show if ALL conditions`
+     | :superscript:`makes the page visible if all conditions are verified: statistics and marketing`
+   * | :guilabel:`show if AT LEAST ONE condition`
+     | :superscript:`makes the page visible if at least one of conditions is verified: statistics or marketing`
    |
-#. Set show-conditions on Statistics, Marketing cookies status
+#. Set conditions on statistics/marketing cookies status
 
-   * *any value*
-   * *denied*
-   * *accepted*
+   * | :guilabel:`any value`
+     | :superscript:`always true`
+   * | :guilabel:`denied`
+     | :superscript:`true if statistics/marketing cookies are denied`
+   * | :guilabel:`accepted`
+     | :superscript:`true if statistics/marketing cookies are accepted`
    |
 
    .. image:: ../../Images/setup_003.png
@@ -53,10 +60,10 @@ Conditions evaluation type
 
 Here you have two options:
 
-* **show if ALL conditions** is an AND evaluation: if all conditions are true,
-  the Page is visible, else not
-* **show if AT LEAST ONE condition** is an OR evaluation: if at least one
-  condition is true, the Page is visible; the Page is hidden if all conditions
+* :guilabel:`show if ALL conditions` is an AND evaluation: if all conditions are true,
+  the page is visible, else not
+* :guilabel:`show if AT LEAST ONE condition` is an OR evaluation: if at least one
+  condition is true, the page is visible; the page is hidden if all conditions
   are false
 
 Conditions
@@ -65,6 +72,6 @@ Conditions
 In condition menus (Statistics, Marketing)
 three options are available:
 
-* **any value** means that condition is always true
-* **denied** means that condition is true when cookies are denied
-* **accepted** means that condition is true when chookies are accepted
+* :guilabel:`any value` the condition is always true
+* :guilabel:`denied` the condition is true when cookies are denied
+* :guilabel:`accepted` the condition is true when chookies are accepted

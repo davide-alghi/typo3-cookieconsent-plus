@@ -1,6 +1,8 @@
 <?php
 
-defined('TYPO3_MODE') or die();
+declare(strict_types=1);
+
+defined('TYPO3') or die();
 
 /**
  * This file is part of the TYPO3 CMS extension.
@@ -30,12 +32,5 @@ defined('TYPO3_MODE') or die();
  */
 
 (function () {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
-        'pages',
-        'EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_pages.xlf'
-    );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
-        'tt_content',
-        'EXT:cookieconsent_plus/Resources/Private/Language/locallang_csh_ttcontent.xlf'
-    );
+    // nop
 })();
