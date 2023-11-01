@@ -5,7 +5,7 @@
 
 
 ====
-Develompment
+Development
 ====
 
 The extension adds four custom enable fields:
